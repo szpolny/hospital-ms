@@ -1,0 +1,14 @@
+{
+  "tasks": {
+    "dev": "deno run --watch main.ts",
+    "patch-libsql": "sed -i -e 's/\"deno\"/\"no-deno\"/' node_modules/@libsql/client/package.json",
+    "db:push": "deno run -A npm:drizzle-kit push"
+  },
+  "nodeModulesDir": "auto",
+  "imports": {
+    "@libsql/client": "npm:@libsql/client@^0.15.2",
+    "dotenv": "npm:dotenv@^16.4.7",
+    "drizzle-kit": "npm:drizzle-kit@^0.30.6",
+    "drizzle-orm": "npm:drizzle-orm@^0.41.0"
+  }
+}
